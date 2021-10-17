@@ -1,0 +1,797 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+:root {
+    --Green: #598349;
+    --clr-gray: #37474f;
+    --clr-gray-light: #b0bec5;
+}
+
+
+/*---------------------section reset-------------------------------*/
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection {
+    background: var(--Green);
+    color: #333;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #333;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--Green);
+}
+
+body {
+    background: #111;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+section {
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+
+/*---------------------section botones 1 -------------------------------*/
+
+.btn {
+    padding: .7rem 3rem;
+    background: #444;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+.btn i {
+    padding: 0 .5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover {
+    background: var(--Green);
+}
+
+
+/*---------------------section botones 2-------------------------------*/
+
+.bttn {
+    width: 100%;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+    background-color: var(--Green);
+    color: white;
+    cursor: pointer;
+}
+
+.bttn:hover {
+    color: #fff;
+    background-color: rgb(0, 134, 11);
+}
+
+
+/*---------------------section botones 3-------------------------------*/
+
+.bttn3 {
+    position: relative;
+    padding: .8rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00000080;
+    margin-top: 1rem;
+    transition: 1s;
+    font-size: 2rem;
+    border-radius: 5rem;
+    overflow: hidden;
+    -wetkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+}
+
+.bttn3:hover {
+    background: var(--green);
+    box-shadow: 0 0 10px var(--Green), 0 0 30px var(--Green), 0 0 60px var(--Green), 0 0 100px var(--Green);
+}
+
+.bttn3::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 800%;
+    background: var(--Green);
+    transition: 1s;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.33s - var(--i));
+}
+
+.bttn3:hover::before {
+    width: 100%;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.bttn3::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #444;
+    transition: 0.5s;
+}
+
+.bttn3:hover::after {
+    background: var(--Green);
+}
+
+.bttn3 span {
+    position: relative;
+    z-index: 1;
+    font-size: 2rem;
+    color: #fff;
+    opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.bttn3:hover span {
+    opacity: 1;
+}
+
+
+/*---------------------section header-menu-------------------------------*/
+
+.heading {
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #fff4;
+    color: #fff;
+}
+
+.heading span {
+    color: var(--Green);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img {
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .7rem solid var(--Green);
+}
+
+header .user .name {
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+header .user .post {
+    font-size: 2rem;
+    color: #eee;
+}
+
+header .navbar {
+    width: 100%;
+}
+
+header .navbar ul {
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header .navbar ul li a {
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: #444;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover {
+    background: var(--Green);
+}
+
+#menu {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: #222;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+
+/*---------------------section home-------------------------------*/
+
+.home {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+
+.home h3 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.home h1 {
+    font-size: 5rem;
+    color: #fff;
+}
+
+.home h1 span {
+    color: var(--Green);
+}
+
+.home p {
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+
+/*---------------------section about-------------------------------*/
+
+.about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.about .row .info {
+    flex: 1 1 48rem;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
+}
+
+.about .row .info h3 {
+    font-size: 2rem;
+    color: var(--Green);
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
+.about .row .info h3 span {
+    color: #eee;
+    padding: 0 .5rem;
+}
+
+.about .row .counter {
+    flex: 1 1 48rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .row .counter .box {
+    width: 20rem;
+    background: #333;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.about .row .counter .box span {
+    font-size: 4rem;
+    color: var(--Green);
+}
+
+.about .row .counter .box h3 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+/*---------------------section modal-------------------------------*/
+
+
+/*=============== MODAL ===============*/
+
+
+/*=============== GOOGLE FONTS ===============*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+
+:root {
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+    --big-font-size: 2.5rem;
+    --normal-font-size: 1.5rem;
+    /*========== z index ==========*/
+    --z-modal: 1000;
+}
+
+@media screen and (min-width: 968px) {
+     :root {
+        --big-font-size: 2.75rem;
+        --normal-font-size: 1.5rem;
+    }
+}
+
+
+/*=============== MODAL ===============*/
+
+.modal {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.modal__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(250, 250, 250, 0.1);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: flex-end;
+    overflow: hidden;
+    transition: all .3s;
+    z-index: var(--z-modal);
+    visibility: hidden;
+    opacity: 0;
+    /*=== Effect 3 ===*/
+    /* perspective: 1000px; */
+}
+
+.modal__content {
+    position: fixed;
+    background-color: #333;
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+    border-radius: 1rem 1rem 0 0;
+    transition: all .3s;
+    /*=== Effect 1 ===*/
+    transform: translateY(10%);
+}
+
+.modal__img {
+    width: 250px;
+    margin-bottom: .75rem;
+}
+
+.modal__close {
+    display: inline-flex;
+    background-color: #fff;
+    border-radius: .25rem;
+    color: #000;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+}
+
+.modal__title {
+    font-size: var(--big-font-size);
+    color: var(--Green);
+    font-weight: 500;
+}
+
+.modal__description {
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.modal__button-width {
+    width: 90%;
+}
+
+.modal__button-link {
+    display: block;
+    margin: 2rem auto 0;
+    padding: 1rem 1.5rem;
+    background-color: var(--Green);
+    color: #FFF;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+/* Show modal */
+
+.show-modal {
+    visibility: visible;
+    opacity: 1;
+}
+
+.show-modal .modal__content {
+    /*=== Effect 1 ===*/
+    /*transform: translateY(0);*/
+    /*=== Effect 2 ===*/
+    /* transform: scale(1) translateY(0);*/
+    /*=== Effect 3 ===*/
+    transform: rotateX(0) scale(1) translateY(0);
+}
+
+
+/*=============== BREAKPOINTS ===============*/
+
+
+/* For small devices */
+
+@media screen and (min-width: 576px) {
+    .modal__content {
+        margin: auto;
+        width: 380px;
+        border-radius: 1.25rem;
+    }
+    .modal__img {
+        width: 170px;
+    }
+}
+
+
+/*---------------------section education-------------------------------*/
+
+.education .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+
+.education .box-container .box {
+    width: 27rem;
+    margin: 4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+}
+
+.education .box-container .box span {
+    font-size: 1.3rem;
+    background: #333;
+    color: #fff;
+    border-radius: 5rem;
+    padding: .5rem 2.5rem;
+}
+
+.education .box-container .box h3 {
+    font-size: 2rem;
+    color: #fff;
+    padding-top: 1.5rem;
+}
+
+.education .box-container .box img {
+    width: 100%;
+    height: 100%;
+}
+
+.education .box-container .box i {
+    position: absolute;
+    top: -1.5rem;
+    left: -2.5rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background: var(--Green);
+}
+
+
+/*---------------------section skill-------------------------------*/
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.contenedor {
+    text-align: center;
+    border-radius: 2rem;
+    position: relative;
+    margin: 2rem;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.set {
+    background-color: #333;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 16px;
+    cursor: pointer;
+    color: #fff;
+    width: 100%;
+    height: auto;
+}
+
+.set:hover {
+    box-shadow: 0px 12px 16px #fff;
+    color: var(--Green);
+}
+
+.set:hover .primary {
+    color: var(--Green);
+}
+
+.set span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    background-color: #333;
+    border-radius: 35%;
+}
+
+.set .list {
+    padding: 8px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.set:hover .list {
+    color: #fff;
+}
+
+
+/*---------------------section portfolio-------------------------------*/
+
+.wrapper-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.container {
+    overflow: hidden;
+    box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+    background-color: #333;
+    text-align: center;
+    border-radius: 2rem;
+    position: relative;
+    width: 240px;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+
+.banner-img {
+    position: absolute;
+    background-image: url(https://images.unsplash.com/photo-1582727657635-c771002bdada?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+    height: 10rem;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile-img {
+    width: 7.5rem;
+    clip-path: circle(38px at center);
+    margin-top: 7rem;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.description {
+    margin: 1.5rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+
+/*---------------------section contact-------------------------------*/
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .row .content {
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact .row form .box {
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background: #333;
+    color: #fff;
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 100%;
+}
+
+.contact .row form .box::placeholder {
+    text-transform: capitalize;
+}
+
+.contact .row form .message {
+    height: 15rem;
+    resize: none;
+}
+
+.contact .row .content .title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contact .row .content .info h3 {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
+.contact .row .content .info h3 i {
+    padding-right: 1rem;
+    color: var(--Green);
+}
+
+.top {
+    position: fixed;
+    bottom: 7.5rem;
+    right: 2rem;
+    z-index: 100;
+    display: none;
+    filter: hue-rotate(240deg);
+}
+
+
+/* media queries  */
+
+@media (max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+    .home {
+        padding: 1rem 4rem;
+    }
+}
+
+@media (max-width:991px) {
+    header {
+        left: -120%;
+    }
+    #menu {
+        display: block;
+    }
+    header.toggle {
+        left: 0%;
+    }
+    body {
+        padding: 0;
+    }
+}
+
+@media (max-width:768px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width:400px) {
+    header {
+        width: 100vw;
+    }
+    .heading {
+        margin: 0 3rem;
+    }
+    .about .row .counter .box {
+        width: 100%;
+    }
+    .education .box-container .box {
+        width: 100%;
+    }
+    .portfolio .box-container .box {
+        width: 100%;
+    }
+    .contact .row form {
+        margin: 3rem 0;
+    }
+}
+
+@media (max-width:768px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor {
+        display: flex;
+        flex-direction: row;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:768px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor {
+        display: flex;
+        flex-direction: row;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
