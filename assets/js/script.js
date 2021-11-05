@@ -50,7 +50,7 @@ function download(filename, textInput) {
 document.getElementById("btn")
 document.addEventListener("click", function() {
     let text = document.getElementById("text").value;
-    let filename = "output.txt";
+    let filename = "output.pdf";
     download(filename, text);
 }, false);
 

@@ -780,6 +780,10 @@ header .navbar ul li a:hover {
     h2 {
         font-size: 2rem;
     }
+    .contact .content .img {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 @media (max-width:768px) {
@@ -790,6 +794,13 @@ header .navbar ul li a:hover {
     .contenedor {
         display: flex;
         flex-direction: row;
+        width: 90%;
+    }
+    .contenedor .list {
+        font-size: 12px;
+    }
+    .contenedor span {
+        font-size: 25px;
     }
     h2 {
         font-size: 2rem;
